@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.LoginController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="MySQL Connection">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="15.0" left="100.0" right="100.0" top="50.0" />
+         </VBox.margin>
+      </Label>
+       <TextField fx:id="mysqlUrlField" alignment="CENTER" maxWidth="300.0" minWidth="300.0" promptText="connection-url" text="jdbc:mysql://localhost:3306/">
+         <VBox.margin>
+            <Insets bottom="15.0" left="125.0" right="125.0" top="15.0" />
+         </VBox.margin>
+      </TextField>
+       <TextField fx:id="mysqlUsernameField" alignment="CENTER" maxWidth="275.0" minWidth="300.0" promptText="username">
+         <VBox.margin>
+            <Insets bottom="15.0" left="125.0" right="125.0" top="15.0" />
+         </VBox.margin>
+      </TextField>
+      <PasswordField fx:id="mysqlPasswordField" alignment="CENTER" maxWidth="275.0" minWidth="300.0" promptText="password">
+         <VBox.margin>
+            <Insets bottom="15.0" left="125.0" right="125.0" top="15.0" />
+         </VBox.margin>
+      </PasswordField>
+      <VBox>
+         <children>
+            <CheckBox fx:id="generateData" mnemonicParsing="false" text="Reperform random data generation on MySQL">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="migrateToMongo" mnemonicParsing="false" text="Migrate sakila database to MongoDB" />
+         </children>
+         <padding>
+            <Insets left="110.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </VBox>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" text="Login">
+         <VBox.margin>
+            <Insets bottom="50.0" top="15.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="7.5" left="50.0" right="50.0" top="7.5" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>

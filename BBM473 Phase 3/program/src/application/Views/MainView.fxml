@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" prefHeight="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.MainController">
+    <children>
+      <VBox>
+         <children>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" minHeight="33.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Number of Tables">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="32.0" prefWidth="52.0" />
+                  <Label fx:id="tableCount">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+              <TableView fx:id="userTableView" onMouseClicked="#onUserTableRowClicked" prefWidth="553.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+        <TabPane minWidth="600.0" prefWidth="660.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+            <tabs>
+                <Tab text="Column Details">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <TableView fx:id="columnTableView" layoutX="19.0" layoutY="64.0" onMouseClicked="#onUserTableRowClicked" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Data Records">
+                    <content>
+                  <VBox>
+                     <children>
+                              <AnchorPane VBox.vgrow="ALWAYS">
+                                  <children>
+                                      <TableView fx:id="rowTableView" layoutX="19.0" layoutY="46.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS" />
+                                  </children>
+                              </AnchorPane>
+                        <HBox alignment="CENTER">
+                           <children>
+                                      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onInsertClicked" text="Insert">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                                      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onUpdateClicked" text="Update">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                                      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onDeleteClicked" text="Delete">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</HBox>

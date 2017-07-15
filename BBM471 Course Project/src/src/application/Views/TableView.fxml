@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.TableController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="302.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="300.0" text="MySQL" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="mysqlQueryExecutionTime" />
+            <Label fx:id="mysqlTableRenderingTime" />
+            <Separator prefWidth="200.0" />
+            <TableView fx:id="mysqlTable" maxWidth="1.7976931348623157E308" prefHeight="582.0" prefWidth="302.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="296.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="303.0" text="MongoDB" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="mongoQueryExecutionTime" />
+            <Label fx:id="mongoTableRenderingTime" />
+            <Separator prefWidth="200.0" />
+            <TableView fx:id="mongoTable" maxWidth="1.7976931348623157E308" prefHeight="583.0" prefWidth="296.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" />
+   </padding>
+</HBox>

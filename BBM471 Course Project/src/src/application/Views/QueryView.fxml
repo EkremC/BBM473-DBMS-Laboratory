@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="queryBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.QueryController">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <ComboBox fx:id="filterNumber" prefHeight="25.0" prefWidth="177.0" promptText="Select filter number">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Button mnemonicParsing="false" onAction="#applyFilter" prefHeight="25.0" prefWidth="80.0" text="Apply" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <Separator prefWidth="200.0">
+         <VBox.margin>
+            <Insets bottom="25.0" />
+         </VBox.margin></Separator>
+   </children>
+</VBox>
